@@ -1,4 +1,4 @@
 '*':
 
-'*nginx*':
+'nginx-03':
   - nginx
