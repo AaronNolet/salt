@@ -7,7 +7,6 @@ install-nginx:
   pkg.installed:
     - pkgs:
       - nginx-extras
-      - libnginx-mod-http-headers-more-filter
 
 nginx:
   service.running:
