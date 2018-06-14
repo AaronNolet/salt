@@ -23,7 +23,6 @@ apache2-utils:
 /etc/nginx/nginx.conf:
   file.managed:
     - source: salt://nginx/files/etc/nginx/nginx.conf
-    - template: jinja
     - require:
       - pkg: install-nginx
 
@@ -31,7 +30,6 @@ apache2-utils:
 /etc/nginx/conf.d:
   file.recurse:
     - source: salt://nginx/files/etc/nginx/conf.d
-    - template: jinja
     - require:
       - pkg: install-nginx
     - watch_in:
