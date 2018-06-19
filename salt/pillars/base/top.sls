@@ -1,5 +1,5 @@
 base:
   'nginx*':
     - users
-    - user-formula.sls
-    - users.sls
+    - users/user-formula.sls
+    - users/users.sls
