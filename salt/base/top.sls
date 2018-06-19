@@ -1,4 +1,3 @@
-'*':
-
-'nginx*':
-  - nginx
+base:
+  'nginx*':
+    - nginx
