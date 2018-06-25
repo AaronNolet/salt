@@ -9,4 +9,3 @@ include:
 base:
   'nginx*':
     - users
-    - salt://users/users.sls
