@@ -1,7 +1,8 @@
 users:
   anolet:
     fullname: Aaron Nolet
-    password: letmein
+    password: eZ#xYJj4
+    enforce_password: True
     createhome: True
     sudouser: True
     groups:
