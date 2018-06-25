@@ -7,5 +7,5 @@ include:
   - users.user_files
 
 base:
-  'nginx*':
+  '*':
     - users
