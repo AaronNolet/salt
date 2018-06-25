@@ -1,4 +1,6 @@
 base:
+  '*':
+
   'nginx*':
     - nginx
     - users
