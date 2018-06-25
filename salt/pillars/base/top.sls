@@ -9,4 +9,4 @@ include:
 base:
   'nginx*':
     - users
-    - users/users.sls
+    - users.sls
