@@ -1,4 +1,0 @@
-dev:
-  'nginx*':
-    - nginx
-    - users
