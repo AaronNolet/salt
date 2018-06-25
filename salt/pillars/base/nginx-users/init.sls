@@ -1,5 +1,15 @@
 users:
   anolet:
-    absent: True
-    purge: True
-    force: True
+    fullname: Aaron Nolet
+    password: letmein
+    enforce_password: True
+    createhome: True
+    sudouser: True
+    groups:
+      - sudo
+      - adm
+      - cdrom
+      - dip
+      - plugdev
+      - lxd
+      - lpadmin
