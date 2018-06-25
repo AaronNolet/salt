@@ -1,5 +1,5 @@
 users:
   testuser:
-    fullname: Test User
-    password: eZ#xYJj4
-    sudouser: True
+    absent: True
+    purge: True
+    force: True
