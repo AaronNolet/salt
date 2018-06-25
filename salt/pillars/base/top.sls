@@ -5,7 +5,3 @@ include:
   - users.profile
   - users.vimrc
   - users.user_files
-
-base:
-  '*':
-    - users
