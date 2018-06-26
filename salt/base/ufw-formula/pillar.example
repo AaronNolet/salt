@@ -1,0 +1,113 @@
+ufw:
+
+  enabled: True
+
+  settings:
+    loglevel: low
+    ipv6: True
+    default_input_policy: 'DROP'
+    default_output_policy: 'ACCEPT'
+    default_forward_policy: 'DROP'
+    default_application_policy: 'SKIP'
+    manage_builtins: False
+    ipt_sysctl: '/etc/ufw/sysctl.conf'
+    ipt_modules:
+      - nf_conntrack_ftp
+      - nf_nat_ftp
+      - nf_conntrack_netbios_ns
+
+  sysctl:
+    forwarding: 1
+    rp_filter: 1
+    accept_source_route: 0
+    accept_redirects: 0
+    icmp_echo_ignore_broadcasts: 1
+    icmp_ignore_bogus_error_responses: 1
+    icmp_echo_ignore_all: 0
+    log_martians: 0
+    tcp_syncookies: 0
+    tcp_sack: 1
+    ipv6_autoconf: 1
+    use_tempaddr: 1
+
+  services:
+
+    # Allow 80/tcp (http) traffic from only two remote addresses.
+    http:
+      protocol: tcp
+      from_addr:
+        - 10.0.2.15
+        - 10.0.2.16
+      comment: Upstream loadbalancers
+
+    # Allow 443/tcp (https) traffic from network 10.0.0.0/8 to an specific local ip.
+    https:
+      protocol: tcp
+      from_addr:
+        - 10.0.0.0/8
+      to_addr: 10.0.2.1
+      comment: Intraweb portal
+
+    # Allow from a service port.
+    smtp:
+      protocol: tcp
+      comment: Mail relay
+
+    # Allow from a specific port, by number.
+    139:
+      protocol: tcp
+      comment: Netbios
+
+    # Deny from a specific port, by number.
+    140:
+      protocol: tcp
+      deny: True
+
+    # Deny everything from a specific ip address
+    '*':
+      protocol: tcp
+      deny: True
+      from_addr: 10.0.0.1
+
+    # Deny everything from a multiple ip addresses
+    '*':
+      protocol: tcp
+      deny: True
+      from_addr:
+        - 10.0.0.2
+        - 10.0.0.3
+
+    # Limit a specific port, by number.
+    170:
+      limit: True
+      protocol: tcp
+      comment: Print service
+
+    # Allow from a range of ports, udp.
+    "10000:20000":
+      protocol: udp
+      comment: We need ports, lots of ports
+
+    # Allow from two specific ports, udp.
+    "30000,40000":
+      protocol: udp
+      comment: Game server and admin
+
+  # Allow applications defined at /etc/ufw/applications.d/
+  applications:
+    OpenSSH:
+      enabled: True
+      comment: We are using fail2ban anyway
+
+    # Limit access to salt master
+    Saltmaster:
+      limit: True
+
+    # Deny access to Postgresql
+    Postgresql:
+      deny: True
+
+  # Allow all traffic in on the specified interface
+  interfaces:
+    eth1:
+      comment: Honey pot
