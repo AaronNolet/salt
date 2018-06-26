@@ -43,5 +43,3 @@ install-default-jre:
 /etc/ufw/applications.d:
   file.recurse:
     - source: salt://iot-fin-edge/files/etc/ufw/applications.d
-    - watch_in:
-      - service: ufw
