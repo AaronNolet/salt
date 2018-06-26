@@ -2,7 +2,6 @@ ufw:
   enabled: True
   settings:
     ipv6: False
-
   services:
     applications:
       OpenSSH:
