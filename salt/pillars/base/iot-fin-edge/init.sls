@@ -3,4 +3,4 @@ ufw:
   settings:
     ipv6: False
   applications:
-    OpenSSH:
+    - OpenSSH
