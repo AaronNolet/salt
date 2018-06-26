@@ -39,7 +39,3 @@ install-default-jre:
       - pkg: install-default-jre
     - text:
       - JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-
-/etc/ufw/applications.d:
-  file.recurse:
-    - source: salt://iot-fin-edge/files/etc/ufw/applications.d
