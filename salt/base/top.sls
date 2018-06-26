@@ -5,3 +5,4 @@ base:
 
   'IoT-Fin-Edge*':
     - users
+    - ufw-formula/ufw
