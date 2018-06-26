@@ -6,3 +6,7 @@ ufw:
     OpenSSH:
       enabled: True
       comment: Allow SSH
+    Saltmaster:
+      enabled: True
+    Fin_Stack:
+      enabled: True
