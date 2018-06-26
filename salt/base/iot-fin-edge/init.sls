@@ -1,5 +1,5 @@
 #
-# Install NginX webserver, setup global configuration
+# Install IoT Warez common, fail2ban, default-jre
 #
 
 # Install package and setup service
