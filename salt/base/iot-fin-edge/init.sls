@@ -3,60 +3,39 @@
 #
 
 # Install package and setup service
-install-nginx:
+install-common:
   pkg.installed:
     - pkgs:
-      - nginx-extras
+      - htop
+      - unzip
 
-nginx:
+install-fail2ban:
+  pkg.installed:
+    - pkgs:
+      - fail2ban
+
+fail2ban:
   service.running:
     - require:
-      - pkg: install-nginx
+      - pkg: install-fail2ban
     - watch:
-      - file: /etc/nginx/nginx.conf
+      - file: /etc/fail2ban/jail.conf
 
-# Apache Utilities - for tools like ab, htpasswd
-apache2-utils:
-  pkg.installed
-
-# Main nginx configurationf file
-/etc/nginx/nginx.conf:
+# Main fail2ban jail configurationf file
+/etc/fail2ban/jail.conf:
   file.managed:
-    - source: salt://nginx/files/etc/nginx/nginx.conf
+    - source: salt://iot-fin-edge/files/etc/fail2ban/jail.conf
     - require:
-      - pkg: install-nginx
+      - pkg: install-fail2ban
 
-# Global includes
-/etc/nginx/conf.d:
-  file.recurse:
-    - source: salt://nginx/files/etc/nginx/conf.d
-    - require:
-      - pkg: install-nginx
-    - watch_in:
-      - service: nginx
+install-default-jre:
+  pkg.installed:
+    - pkgs:
+      - default-jre
 
-# FastCGI parameters
-/etc/nginx/fastcgi_params:
-  file.managed:
-    - source: salt://nginx/files/etc/nginx/fastcgi_params
+/etc/environment:
+  file.append:
     - require:
-      - pkg: install-nginx
-    - watch_in:
-      - service: nginx
-
-# Create directory for SSL certificates
-/etc/nginx/ssl:
-  file.directory:
-    - user: root
-    - group: www-data
-    - mode: 640
-    - require:
-      - pkg: install-nginx
-
-# Delete default vhost
-/etc/nginx/sites-enabled/default:
-  file.absent:
-    - require:
-      - pkg: install-nginx
-    - watch_in:
-      - service: nginx
+      - pkg: install-default-jre
+    - text:
+      - JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
