@@ -1,10 +1,12 @@
 users:
   anolet:
     fullname: Aaron Nolet
-    password: eZ#xYJj4
+    empty_password: True
     enforce_password: False
     createhome: True
     sudouser: True
+    sudo_rules:
+      - ALL=(ALL) NOPASSWD:ALL
     groups:
       - sudo
       - adm
