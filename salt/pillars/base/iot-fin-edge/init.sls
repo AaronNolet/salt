@@ -3,4 +3,6 @@ ufw:
   settings:
     ipv6: False
   applications:
-    - OpenSSH
+    OpenSSH:
+      enabled: True
+      comment: Allow SSH
