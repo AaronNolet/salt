@@ -4,3 +4,4 @@ base:
 
   'IoT-Fin-Edge*':
     - fin-users
+    - iot-fin-edge
