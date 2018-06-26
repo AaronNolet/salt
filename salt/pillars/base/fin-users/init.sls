@@ -1,11 +1,13 @@
 users:
   iotwarez:
-    fullname: IoT Warez
-    password: eZ#xYJj4
-    createhome: True
-    sudouser: True
-    ssh_known_hosts:
-      importanthost:
-        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
-    ssh_keys:
-      privkey: 
+    fullname: IoT Warez LLC
+    groups:
+      - sudo
+      - adm
+      - cdrom
+      - dip
+      - plugdev
+      - lxd
+      - lpadmin
+    ssh_auth_file:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEAgmimNCTQl/K9l0/qt6tcJ1yndahWRDMyPkDjZQLBzAC9iL3ErP7sxF6tuClQ6M3yZjo/KuG1k0FzgwXuGYGhVVowqyRTIBku3TPHPBGUbRR6PLXPieboNsc3IYti3BpNe03eS/bT9CJctLSlBMBT4pAz9TlwviFLL9gFGu7GjiAb13tiCStaHjLa/X1tWUl
