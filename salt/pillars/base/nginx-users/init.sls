@@ -2,7 +2,6 @@ users:
   anolet:
     fullname: Aaron Nolet
     empty_password: True
-    enforce_password: False
     createhome: True
     sudouser: True
     sudo_rules:
