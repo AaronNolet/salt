@@ -4,4 +4,3 @@ ufw:
     ipv6: False
   applications:
     OpenSSH:
-      enabled: True
