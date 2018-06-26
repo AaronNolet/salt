@@ -1,3 +1,3 @@
 base:
-    'IoT-Fin-Edge*':
-      - ufw
+  'IoT-Fin-Edge*':
+    - ufw
