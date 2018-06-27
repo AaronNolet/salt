@@ -8,7 +8,7 @@ users:
       enabled: True
       file_mode: 555
     ssh_keys:
-      privkey: salt://users/files/ssh_keys/id_rsa
+      privkey: salt://users/files/ssh_keys/podupdate_id_rsa
 
   iotwarez:
     fullname: IoT Warez LLC
