@@ -6,7 +6,7 @@ users:
     shell: /bin/false
     user_files:
       enabled: True
-      sym_mode: 555
+      file_mode: 555
 
   iotwarez:
     fullname: IoT Warez LLC
