@@ -6,7 +6,6 @@ users:
     shell: /bin/false
     user_files:
       enabled: True
-      file_mode: keep
       sym_mode: 555
 
   iotwarez:
