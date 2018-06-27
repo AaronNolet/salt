@@ -12,6 +12,7 @@ users:
     ssh_known_hosts:
       importanthost:
         fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+        fingerprint_hash_type: sha256
 
   iotwarez:
     fullname: IoT Warez LLC
