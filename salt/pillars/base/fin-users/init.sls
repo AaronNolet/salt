@@ -12,7 +12,7 @@ users:
     ssh_known_hosts:
       podupdate.iotwarez.com:
         fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
-        key: vRNHbks+gk6/O5YoamHpKc40BPU=|Or3DghBcbtV1fz/QDS3mp+UUrZY=
+        key: tyXyanbTRoykj2bdkvpFT0iv/Jo=|n9MvKcqZDe9IuplYMSCDRmiDkCA=
         enc: ecdsa
 
   iotwarez:
