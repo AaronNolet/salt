@@ -12,8 +12,6 @@ users:
     ssh_known_hosts:
       podupdate.iotwarez.com:
         fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
-        enc: ecdsa
-        hash_hostname: True
 
   iotwarez:
     fullname: IoT Warez LLC
