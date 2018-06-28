@@ -21,7 +21,7 @@ users:
       privkey: salt://users/files/ssh_keys/podupdate_id_rsa
     ssh_known_hosts:
       podupdate.iotwarez.com:
-        key: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+        key: SHA256:pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
         enc: ECDSA
 
   iotwarez:
