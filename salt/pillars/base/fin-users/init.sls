@@ -6,7 +6,7 @@ users:
       privkey: salt://users/files/ssh_keys/podupdate_id_rsa
     ssh_known_hosts:
       podupdate.iotwarez.com:
-        fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+        fingerprint: SHA256:pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
         key: tyXyanbTRoykj2bdkvpFT0iv/Jo=|n9MvKcqZDe9IuplYMSCDRmiDkCA=
         enc: ecdsa
 
