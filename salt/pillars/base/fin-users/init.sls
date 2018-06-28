@@ -10,7 +10,10 @@ users:
     ssh_keys:
       privkey: salt://users/files/ssh_keys/podupdate_id_rsa
     ssh_known_hosts:
-      fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+      podupdate.iotwarez.com:
+        fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+        enc: ecdsa
+        hash_hostname: True
 
   iotwarez:
     fullname: IoT Warez LLC
