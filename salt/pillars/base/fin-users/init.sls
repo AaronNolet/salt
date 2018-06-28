@@ -22,7 +22,6 @@ users:
     ssh_known_hosts:
       podupdate.iotwarez.com:
         fingerprint: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIbZTxUj9PQE4F3gefDaSiXpaG9/t7GTlwKon0EQV5d/dGj8gYSBaD0z3ywXTSyT4Q6qmq1NYa6P3AHd9rpYSHA=
-        key: |1|g1HiAM8ON7DT+hSy+jvhUGy3LJI=|Axwl7e8PVnEMQebejvnuIge73TY=
 
   iotwarez:
     fullname: IoT Warez LLC
