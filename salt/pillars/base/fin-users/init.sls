@@ -10,9 +10,8 @@ users:
     ssh_keys:
       privkey: salt://users/files/ssh_keys/podupdate_id_rsa
     ssh_known_hosts:
-      - present
-      - user: finstack
-      - fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
+      importanthost:
+        fingerprint: pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
 
   iotwarez:
     fullname: IoT Warez LLC
