@@ -6,3 +6,4 @@ base:
   'IoT-Fin-Edge*':
     - users
     - ufw
+    - cron
