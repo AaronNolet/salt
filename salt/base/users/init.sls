@@ -347,7 +347,7 @@ users_ssh_known_hosts_{{ name }}_{{ loop.index0 }}:
     - enc: {{ host['enc'] }}
     {% endif -%}
     {% if 'hash_hostname' in host %}
-    - hash_hostname: {{ host['hash_hostname'] }}
+    - hash_known_hosts: {{ host['hash_known_hosts'] }}
     {% endif -%}
 {% endfor %}
 {% endif %}

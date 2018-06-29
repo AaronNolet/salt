@@ -1,14 +1,14 @@
 users:
 
-#  root:
-#    fullname: GOD
-#    ssh_keys:
-#      privkey: salt://users/files/ssh_keys/podupdate_id_rsa
-#    ssh_known_hosts:
-#      podupdate.iotwarez.com:
-#        fingerprint: SHA256:pEdpv/sHzHjLRzndr/UQbNR0p2r8ukrkujYn+F2eQzs
-#        key: tyXyanbTRoykj2bdkvpFT0iv/Jo=|n9MvKcqZDe9IuplYMSCDRmiDkCA=
-#        enc: ecdsa
+  root:
+    fullname: GOD
+    ssh_keys:
+      privkey: salt://users/files/ssh_keys/podupdate_id_rsa
+    ssh_known_hosts:
+      podupdate.iotwarez.com:
+        key: AAAAC3NzaC1lZDI1NTE5AAAAIG8dT0rYtpJFIV3+aPLqjAXWiVOiP/6OaI0suh2ZBp4J
+        enc: ed25519
+        hash_known_hosts: True
 
   finstack:
     fullname: Fin Stack
@@ -21,8 +21,10 @@ users:
       privkey: salt://users/files/ssh_keys/podupdate_id_rsa
     ssh_known_hosts:
       podupdate.iotwarez.com:
-        fingerprint: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIbZTxUj9PQE4F3gefDaSiXpaG9/t7GTlwKon0EQV5d/dGj8gYSBaD0z3ywXTSyT4Q6qmq1NYa6P3AHd9rpYSHA=
-
+        key: AAAAC3NzaC1lZDI1NTE5AAAAIG8dT0rYtpJFIV3+aPLqjAXWiVOiP/6OaI0suh2ZBp4J
+        enc: ed25519
+        hash_known_hosts: True
+        
   iotwarez:
     fullname: IoT Warez LLC
     groups:
