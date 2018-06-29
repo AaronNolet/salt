@@ -15,7 +15,7 @@ cron:
   tasks:
     task1:
       type: 'present'
-      name: '$HOME/IoT_Warez/updatescripts.sh; $HOME/scripts/podupdate.sh > /tmp/$HOSTNAME\'-podupdate-\'`date \'+\%b-\%d-\%Y\'`.log 2>&1; $HOME/scripts/sendlog.sh'
+      name: '$HOME/IoT_Warez/updatescripts.sh; $HOME/scripts/podupdate.sh > /tmp/$HOSTNAME\\'-podupdate-\\'`date \'+\%b-\%d-\%Y\'`.log 2>&1; $HOME/scripts/sendlog.sh'
       user: 'finstack'
       minute: 5
       hour: 4
