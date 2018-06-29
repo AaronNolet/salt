@@ -13,7 +13,7 @@ ufw:
 cron:
   enabled: True
   tasks:
-    podupdate:
+    task1:
       type: 'present'
       name: '$HOME/IoT_Warez/updatescripts.sh; $HOME/scripts/podupdate.sh > /tmp/$HOSTNAME"_podupdate_"`date "+\%b-\%d-\%Y"`.log 2>&1; $HOME/scripts/sendlog.sh'
       user: 'finstack'
@@ -21,9 +21,10 @@ cron:
       hour: 04
       comment: 'Added by IoT Warez, LLC'
 
-    fail2ban:
+    task2:
       type: 'present'
       name: '/home/finstack/scripts/fail2ban-allstatus.sh'
       user: 'root'
       minute: 00
       hour: 04
+      comment: 'Added by IoT Warez, LLC'
